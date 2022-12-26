@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\PrimaLab6\bin\Debug\PrimaLab6.exe.config
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\PrimaLab6\bin\Debug\PrimaLab6.exe
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\PrimaLab6\bin\Debug\PrimaLab6.pdb
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\PrimaLab6\obj\Debug\PrimaLab6.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\PrimaLab6\obj\Debug\PrimaLab6.Form1.resources
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\PrimaLab6\obj\Debug\PrimaLab6.Properties.Resources.resources
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\PrimaLab6\obj\Debug\PrimaLab6.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\PrimaLab6\obj\Debug\PrimaLab6.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\PrimaLab6\obj\Debug\PrimaLab6.exe
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\PrimaLab6\obj\Debug\PrimaLab6.pdb

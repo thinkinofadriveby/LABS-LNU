@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\Study\3\[3.1] Комп'ютерні мережі\ClientServer\ClientServer\bin\Debug\ClientServer.exe.config
+C:\Users\user\Desktop\Study\3\[3.1] Комп'ютерні мережі\ClientServer\ClientServer\bin\Debug\ClientServer.exe
+C:\Users\user\Desktop\Study\3\[3.1] Комп'ютерні мережі\ClientServer\ClientServer\bin\Debug\ClientServer.pdb
+C:\Users\user\Desktop\Study\3\[3.1] Комп'ютерні мережі\ClientServer\ClientServer\obj\Debug\ClientServer.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Study\3\[3.1] Комп'ютерні мережі\ClientServer\ClientServer\obj\Debug\ClientServer.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Study\3\[3.1] Комп'ютерні мережі\ClientServer\ClientServer\obj\Debug\ClientServer.exe
+C:\Users\user\Desktop\Study\3\[3.1] Комп'ютерні мережі\ClientServer\ClientServer\obj\Debug\ClientServer.pdb

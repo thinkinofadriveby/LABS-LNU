@@ -1,0 +1,17 @@
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Bezier.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.Form1.resources
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Bezier.csproj.GenerateResource.Cache
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Bezier.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.exe
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.pdb
+D:\ОГКГ\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Bezier.csprojAssemblyReference.cache
+D:\ОГКГ\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.Form1.resources
+D:\ОГКГ\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.Properties.Resources.resources
+D:\ОГКГ\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Bezier.csproj.GenerateResource.cache
+D:\ОГКГ\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Bezier.csproj.CoreCompileInputs.cache
+D:\ОГКГ\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.exe
+D:\ОГКГ\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.pdb
+D:\ОГКГ\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.exe.config
+D:\ОГКГ\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.exe
+D:\ОГКГ\Task2Bezier\Task2Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.pdb

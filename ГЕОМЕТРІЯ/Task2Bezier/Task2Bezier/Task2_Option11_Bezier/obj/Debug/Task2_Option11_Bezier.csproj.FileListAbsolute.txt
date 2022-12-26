@@ -1,0 +1,28 @@
+D:\Natalia\3 курс 1 семестр\Геометрія\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.csprojAssemblyReference.cache
+D:\Natalia\3 курс 1 семестр\Геометрія\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.Properties.Resources.resources
+D:\Natalia\3 курс 1 семестр\Геометрія\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.csproj.GenerateResource.cache
+D:\Natalia\3 курс 1 семестр\Геометрія\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.csproj.CoreCompileInputs.cache
+D:\Natalia\3 курс 1 семестр\Геометрія\Task2_Option11_Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.exe.config
+D:\Natalia\3 курс 1 семестр\Геометрія\Task2_Option11_Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.exe
+D:\Natalia\3 курс 1 семестр\Геометрія\Task2_Option11_Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.pdb
+D:\Natalia\3 курс 1 семестр\Геометрія\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.exe
+D:\Natalia\3 курс 1 семестр\Геометрія\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.pdb
+C:\Users\Lenovo\Desktop\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.exe.config
+C:\Users\Lenovo\Desktop\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.exe
+C:\Users\Lenovo\Desktop\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.pdb
+C:\Users\Lenovo\Desktop\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.csproj.GenerateResource.Cache
+C:\Users\Lenovo\Desktop\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.exe
+C:\Users\Lenovo\Desktop\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.pdb
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.exe.config
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.exe
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\bin\Debug\Task2_Option11_Bezier.pdb
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.csproj.GenerateResource.Cache
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.exe
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.pdb
+C:\Users\Lenovo\Desktop\different\university\LNU3course1term\обчГеом та КомпГрафіка\task2\Task2_Option11_Bezier\Task2_Option11_Bezier\Task2_Option11_Bezier\obj\Debug\Task2_Option11_Bezier.Form1.resources

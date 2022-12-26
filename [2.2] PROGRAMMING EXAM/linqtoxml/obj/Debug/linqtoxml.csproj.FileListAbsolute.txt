@@ -1,0 +1,7 @@
+D:\C#\linqtoxml\bin\Debug\linqtoxml.exe.config
+D:\C#\linqtoxml\bin\Debug\linqtoxml.exe
+D:\C#\linqtoxml\bin\Debug\linqtoxml.pdb
+D:\C#\linqtoxml\obj\Debug\linqtoxml.csproj.AssemblyReference.cache
+D:\C#\linqtoxml\obj\Debug\linqtoxml.csproj.CoreCompileInputs.cache
+D:\C#\linqtoxml\obj\Debug\linqtoxml.exe
+D:\C#\linqtoxml\obj\Debug\linqtoxml.pdb

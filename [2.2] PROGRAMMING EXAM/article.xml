@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfArticle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Article>
+    <Id>1</Id>
+    <AuthorId>5</AuthorId>
+    <Header>XML</Header>
+  </Article>
+   <Article>
+     <Id>7</Id>
+    <AuthorId>5</AuthorId>
+    <Header>XML</Header>
+  </Article>
+  <Article>
+    <Id>2</Id>
+    <AuthorId>4</AuthorId>
+    <Header>XML</Header>
+  </Article>
+  <Article>
+    <Id>3</Id>
+    <AuthorId>2</AuthorId>
+    <Header>Header 3</Header>
+  </Article>
+  <Article>
+    <Id>4</Id>
+    <AuthorId>2</AuthorId>
+    <Header>Header 4</Header>
+  </Article>
+  <Article>
+    <Id>5</Id>
+    <AuthorId>3</AuthorId>
+    <Header>Header 5</Header>
+  </Article>
+  <Article>
+    <Id>6</Id>
+    <AuthorId>1</AuthorId>
+    <Header>Header 6</Header>
+  </Article>
+</ArrayOfArticle>

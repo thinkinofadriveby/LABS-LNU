@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBibliographicData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BibliographicData>
+    <ArticleId>1</ArticleId>
+    <Year>2021</Year>
+    <Number>1234</Number>
+  </BibliographicData>
+  <BibliographicData>
+    <ArticleId>2</ArticleId>
+    <Year>2020</Year>
+    <Number>2835</Number>
+  </BibliographicData>
+  <BibliographicData>
+    <ArticleId>3</ArticleId>
+    <Year>2020</Year>
+    <Number>3136</Number>
+  </BibliographicData>
+  <BibliographicData>
+    <ArticleId>4</ArticleId>
+    <Year>2005</Year>
+    <Number>7537</Number>
+  </BibliographicData>
+  <BibliographicData>
+    <ArticleId>5</ArticleId>
+    <Year>2017</Year>
+    <Number>4638</Number>
+  </BibliographicData>
+  <BibliographicData>
+    <ArticleId>6</ArticleId>
+    <Year>2019</Year>
+    <Number>6639</Number>
+  </BibliographicData>
+</ArrayOfBibliographicData>

@@ -1,0 +1,7 @@
+D:\C#\dz1_matrix\bin\Debug\dz1_matrix.exe.config
+D:\C#\dz1_matrix\bin\Debug\dz1_matrix.exe
+D:\C#\dz1_matrix\bin\Debug\dz1_matrix.pdb
+D:\C#\dz1_matrix\obj\Debug\dz1_matrix.csprojAssemblyReference.cache
+D:\C#\dz1_matrix\obj\Debug\dz1_matrix.csproj.CoreCompileInputs.cache
+D:\C#\dz1_matrix\obj\Debug\dz1_matrix.exe
+D:\C#\dz1_matrix\obj\Debug\dz1_matrix.pdb

@@ -1,0 +1,7 @@
+D:\C#\domZavd\bin\Debug\domZavd.exe.config
+D:\C#\domZavd\bin\Debug\domZavd.exe
+D:\C#\domZavd\bin\Debug\domZavd.pdb
+D:\C#\domZavd\obj\Debug\domZavd.csproj.CoreCompileInputs.cache
+D:\C#\domZavd\obj\Debug\domZavd.exe
+D:\C#\domZavd\obj\Debug\domZavd.pdb
+D:\C#\domZavd\obj\Debug\domZavd.csprojAssemblyReference.cache

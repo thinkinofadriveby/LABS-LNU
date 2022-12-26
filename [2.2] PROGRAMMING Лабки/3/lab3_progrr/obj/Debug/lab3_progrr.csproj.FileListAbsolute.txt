@@ -1,0 +1,7 @@
+D:\C#\lab3_progrr\bin\Debug\lab3_progrr.exe.config
+D:\C#\lab3_progrr\bin\Debug\lab3_progrr.exe
+D:\C#\lab3_progrr\bin\Debug\lab3_progrr.pdb
+D:\C#\lab3_progrr\obj\Debug\lab3_progrr.csprojAssemblyReference.cache
+D:\C#\lab3_progrr\obj\Debug\lab3_progrr.csproj.CoreCompileInputs.cache
+D:\C#\lab3_progrr\obj\Debug\lab3_progrr.exe
+D:\C#\lab3_progrr\obj\Debug\lab3_progrr.pdb

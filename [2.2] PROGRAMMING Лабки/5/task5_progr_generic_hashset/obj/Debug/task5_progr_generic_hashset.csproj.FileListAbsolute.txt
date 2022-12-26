@@ -1,0 +1,7 @@
+D:\C#\task5_progr_generic_hashset\obj\Debug\task5_progr_generic_hashset.csproj.AssemblyReference.cache
+D:\C#\task5_progr_generic_hashset\obj\Debug\task5_progr_generic_hashset.csproj.CoreCompileInputs.cache
+D:\C#\task5_progr_generic_hashset\bin\Debug\task5_progr_generic_hashset.exe.config
+D:\C#\task5_progr_generic_hashset\bin\Debug\task5_progr_generic_hashset.exe
+D:\C#\task5_progr_generic_hashset\bin\Debug\task5_progr_generic_hashset.pdb
+D:\C#\task5_progr_generic_hashset\obj\Debug\task5_progr_generic_hashset.exe
+D:\C#\task5_progr_generic_hashset\obj\Debug\task5_progr_generic_hashset.pdb

@@ -1,0 +1,8 @@
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\LAB12Parallel\LAB12Parallel\bin\Debug\LAB12Parallel.exe
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\LAB12Parallel\LAB12Parallel\bin\Debug\LAB12Parallel.pdb
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\LAB12Parallel\LAB12Parallel\bin\Debug\OpenCL.Net.dll
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\LAB12Parallel\LAB12Parallel\obj\Debug\LAB12Parallel.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\LAB12Parallel\LAB12Parallel\obj\Debug\LAB12Parallel.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\LAB12Parallel\LAB12Parallel\obj\Debug\LAB12Parallel.csproj.CopyComplete
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\LAB12Parallel\LAB12Parallel\obj\Debug\LAB12Parallel.exe
+C:\Users\user\Desktop\Study\3\[3.1] Паралельні обчислення\LAB12Parallel\LAB12Parallel\obj\Debug\LAB12Parallel.pdb

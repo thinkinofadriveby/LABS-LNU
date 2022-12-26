@@ -1,0 +1,8 @@
+Ivan, Ivanenko, Shevchenko 7a street, +380676767677
+Petro, Petrenko, Khmelnytskiy street, +380097111111
+SomeName1, SomeSurname1, SomeAddress1, +38095333333
+SomeName2, SomeSurname2, SomeAddress2, +38095444444
+SomeName3, SomeSurname3, SomeAddress3, +38095555555
+SomeName4, SomeSurname4, SomeAddress4, +38095666666
+SomeName5, SomeSurname5, SomeAddress5, +38095777777
+sdfghj, fdfsfsdgs, dadadadaff, 3243242

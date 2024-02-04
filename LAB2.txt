@@ -1,0 +1,292 @@
+% ЗАПУСКАТИ БЕЗ ?-
+
+%first
+first(Head, [Head|_]).
+?- first(1, [1, 2, 3, 4]).
+?- first(2, [1, 2, 3, 4]).
+
+%last
+last(Last, [Last]).
+last(Last, [_|Tail]):- last(Last, Tail).
+?- last(4, [1, 2, 3, 4]).
+?- last(5, [1, 2, 3, 4]).
+
+
+%contains
+contains([Head|_], Head):- !.
+contains([], _):- fail.
+contains([_|Tail], Element):- contains(Tail, Element).
+?- contains([1, 2, 3], 1).
+?- contains([1, 2, 3], 4).
+?- contains([], 1).
+?- contains([1], 1).
+
+
+%size
+size([], 0).
+size([_|Tail], Size):- size(Tail, SizeTail), Size is SizeTail + 1.
+?- size([], Size).
+?- size([1], Size).
+?- size([1, 2, 3], Size).
+?- size([1, 2, 3, 4], Size).
+
+
+%nth_element
+nth_element(0, Head, [Head|_]).
+nth_element(N, Element, [_|Tail]):- nth_element(N1, Element, Tail), N is N1+1. 
+?- nth_element(0, X, [1, 2, 3, 4]).
+?- nth_element(1, X, [1, 2, 3, 4]).
+?- nth_element(2, X, [1, 2, 3, 4]).
+?- nth_element(3, X, [1, 2, 3, 4]).
+
+
+%max
+max(Head, [Head]).
+max(Max_Element, [Head|Tail]):-
+    max(Max_Tail, Tail),
+    Max_Tail > Head -> Max_Element is Max_Tail; Max_Element is Head.
+?- max(Max_Element, [1, 2, 3, 4]).
+?- max(Max_Element, [4, 3, 2, 1]).
+?- max(Max_Element, [1, 2, 3, 4, 5]).
+?- max(Max_Element, [5, 4, 3, 2, 1]).
+
+
+%min
+min(Head, [Head]).
+min(Min_Element, [Head|Tail]):-
+    min(Min_Tail, Tail),
+    Min_Tail < Head -> Min_Element is Min_Tail; Min_Element is Head.
+?- min(Min_Element, [1, 2, 3, 4]).
+?- min(Min_Element, [4, 3, 2, 1]).
+?- min(Min_Element, [1, 2, 3, 4, 5]).
+?- min(Min_Element, [5, 4, 3, 2, 2]).
+
+
+
+%sum
+sum(Head, [Head]).
+sum(Sum, [Head|Tail]):-
+	sum(TailSum, Tail), Sum is TailSum+Head.
+?- sum(Sum, [1, 2, 3, 4]).
+?- sum(Sum, [4, 3, 2, 1]).
+?- sum(Sum, [1, 2, 3, 4, 5]).
+?- sum(Sum, [5, 4, 3, 2, 1]).
+
+
+%palindrome
+% Базовий випадок: Порожній список є паліндромом.
+is_palindrome([]).
+
+% Випадок для списку з одним елементом, також є паліндромом.
+is_palindrome([_]).
+
+% Рекурсивно перевіряємо, чи є список паліндромом.
+is_palindrome([H | T]) :- 
+    append(Middle, [H], T), % Відокремлюємо перший та останній елементи
+    is_palindrome(Middle).   % Рекурсивно перевіряємо паліндромність середньої частини.
+?- is_palindrome([1, 2, 3, 2, 1]).
+?- is_palindrome([a, b, c, b, a]).
+
+
+% Відношення "циклічний зсув" для списку.
+% Відношення перевіряє, чи можна отримати другий список з першого, здійснивши циклічний зсув на k позицій.
+cyclic_shift(List1, List2, K) :-
+    length(List1, N),          % Отримуємо довжину першого списку.
+    KNormalized is K mod N,    % Нормалізуємо значення K в межах довжини списку.
+    append(Part1, Part2, List1), % Розділяємо перший список на дві частини.
+    length(Part2, KNormalized), % Довжина другої частини дорівнює KNormalized.
+    append(Part2, Part1, List2). % Об'єднуємо частини у другому списку.
+?- cyclic_shift([1, 2, 3, 4, 5], Result, 2).
+?- cyclic_shift([a, b, c, d, e], Result, 3).
+?- cyclic_shift([1, 2, 3, 4, 5], Result, 0).
+
+% Відношення "розбиття" за умовою X < 0.
+% Розбиває вхідний список на два підсписки: ті, для яких виконується X < 0,
+% і ті, для яких умова X < 0 не виконується.
+split_by_condition([], [], []).
+split_by_condition([X | Rest], [X | LessThanZero], GreaterOrEqual) :-
+    X < 0,
+    split_by_condition(Rest, LessThanZero, GreaterOrEqual).
+split_by_condition([X | Rest], LessThanZero, [X | GreaterOrEqual]) :-
+    X >= 0,
+    split_by_condition(Rest, LessThanZero, GreaterOrEqual).
+?- split_by_condition([1, -2, 3, -4, 5], LTZ, GE).
+
+
+% Відношення "лінеаризація" для перетворення ієрархічного списку в лінійний список.
+linearize([], []).
+linearize([Head | Tail], Linearized) :-
+    is_list(Head),                % Перевіряємо, чи елемент є списком.
+    linearize(Head, SubLinearized), % Рекурсивно лінеаризуємо підсписок.
+    linearize(Tail, RestLinearized), % Рекурсивно лінеаризуємо решту списку.
+    append(SubLinearized, RestLinearized, Linearized).
+linearize([Head | Tail], [Head | RestLinearized]) :-
+    \+ is_list(Head),             % Якщо елемент не є списком.
+    linearize(Tail, RestLinearized).
+?- linearize([1, [2, 3], 4, [5, [6, 7]]], Result).
+
+%product
+product(Head, [Head]).
+product(Product, [Head|Tail]):-
+	product(TailProduct, Tail), Product is TailProduct*Head.
+?- product(Product, [1, 2, 3, 4]).
+?- product(Product, [4, 3, 2, 1]).
+?- product(Product, [1, 2, 3, 4, 5]).
+?- product(Product, [5, 4, 3, 2, 1]).
+
+
+
+
+%sublist
+new_head(Tail, Head, [Head|Tail]).
+sublist([Head|_], 0, 1, [Head]).
+sublist([Head|Tail], ToSkip, ToTake, Sublist):-
+    ToSkip > 0 -> (ToSkipNew is ToSkip-1, sublist(Tail, ToSkipNew, ToTake, Sublist));
+    ToTake > 0 -> (ToTakeNew is ToTake-1, sublist(Tail, ToSkip, ToTakeNew, ResultTail), new_head(ResultTail, Head, Sublist)).
+?- sublist([1, 2, 3, 4, 5], 0, 3, Sublist).
+?- sublist([1, 2, 3, 4, 5], 2, 2, Sublist).
+?- sublist([1, 2, 3, 4, 5], 4, 1, Sublist).
+?- sublist([1, 2, 3, 4, 5], 5, 0, Sublist).
+
+
+
+%count
+count(_, [], 0).
+count(Head, [Head|Tail], N):-
+    count(Head, Tail, N1), N is N1+1, !.
+count(El, [_|Tail], N):-
+    count(El, Tail, N).
+?- count(1, [1, 2, 3, 4, 1], N).
+?- count(2, [1, 2, 3, 4, 1], N).
+?- count(3, [1, 2, 3, 4, 1], N).
+?- count(4, [1, 2, 3, 4, 1], N).
+?- count(5, [1, 2, 3, 4, 1], N).
+
+
+%permutation
+permutation([Head1|Tail1], List1, List2):-
+    count(Head1, List1, Occ1),
+    count(Head1, List2, Occ2),
+    Occ1 =:= Occ2 -> permutation(Tail1, List1, List2).
+permutation([], _, _).
+permutation(List1, List2):-
+    size(List1, Size1),
+    size(List2, Size2),
+    Size1 =:= Size2,
+    permutation(List1, List1, List2).
+?- permutation([1, 2, 3], [1, 2, 3], [1, 2, 3]).
+?- permutation([1, 2, 3], [1, 3, 2], [1, 2, 3]).
+?- permutation([1, 2, 3], [3, 2, 1], [1, 2, 3]).
+?- permutation([1, 2, 3], [4, 5, 6], [1, 2, 3]).
+
+
+%reverser
+reverser(List, Reversed):-
+    reverser(List, [], Reversed).
+reverser([], Result, Result).
+reverser([Head|Tail], SubResult, Result):- reverser(Tail, [Head | SubResult], Result).
+?- reverser([1, 2, 3], Reversed).
+?- reverser([4, 5, 6], Reversed).
+?- reverser([7, 8, 9], Reversed).
+?- reverser([], Reversed).
+
+
+
+%appender
+appender(List, ToAppend, Result):-
+    reverser(List, Reversed),
+	appender_rec(Reversed, ToAppend, Result).
+appender_rec([], Result, Result).
+appender_rec([Head|Tail], ToAppend, Result):-
+    appender_rec(Tail, [Head | ToAppend], Result).
+?- appender([1, 2, 3], [4, 5], Result).
+?- appender([4, 5, 6], [7, 8], Result).
+?- appender([7, 8, 9], [10, 11], Result).
+?- appender([], [12, 13], Result).
+
+
+%flatten
+has_lists([]):- fail.
+has_lists([Head|Tail]):-
+    is_list(Head) -> true;
+    has_lists(Tail).
+             
+flatten_start(List, Flattened):-
+    flatten_loop(List, Flattened).
+flatten_loop(List, Flattened):-
+    (has_lists(List), flattening(List, [], FlattenedNew), flatten_loop(FlattenedNew, Flattened));
+    flatten_finish(List, Flattened).
+flatten_finish(Flattened, Flattened).
+flattening([], SubResult, SubResult).
+flattening([Head|Tail], SubResult, Flattened):-
+    (is_list(Head) -> 
+    	appender(SubResult, Head, Appended); 
+    	appender(SubResult, [Head], Appended)),
+    flattening(Tail, Appended, Flattened).
+?- flatten([[1, 2], [3, 4], [5, 6]], FlattenedList).
+
+
+%doubler
+doubler(List, Doubled):-
+    doubler(List, [], DoubledReversed),
+    reverser(DoubledReversed, Doubled).
+doubler([], Result, Result).
+doubler([Head|Tail], SubResult, Result):- doubler(Tail, [Head, Head | SubResult], Result).
+?- doubler([1, 2, 3], DoubledList).
+
+
+%remove_duplicates
+remove_duplicates(List, NoDup):-
+    dup_remover(List, [], NoDup), !.
+dup_remover([], Result, Result).
+dup_remover([Head|Tail], SubResult, Result):-
+    (contains(SubResult, Head), dup_remover(Tail, SubResult, Result));
+    dup_remover(Tail, [Head | SubResult], Result).
+?- remove_duplicates([1, 1, 2, 3, 3], NoDup).
+?- remove_duplicates(["a", "b", "c", "a", "b"], NoDup).
+
+
+    
+%set operations
+add(El, Set, Result):-
+    \+ contains(Set, El), new_head(Set, El, Result).
+?- add(1, [2, 3], Result).
+
+
+remove(El, List, Result):-
+    remove(El, List, [], Result), !.
+remove(_, [], Result, Result).
+remove(Head, [Head|Tail], SubResult, Result):-
+    remove(Head, Tail, SubResult, Result).
+remove(El, [Head|Tail], SubResult, Result):-
+    remove(El, Tail, [Head|SubResult], Result).
+?- remove(2, [1, 2, 3], Result).
+
+    
+union([], Result, Result).
+union([Head|Tail], Set2, Result):-
+    (contains(Set2, Head), union(Tail, Set2, Result), !);
+    union(Tail, [Head | Set2], Result), !.
+?- union([1, 2, 3], [4, 5, 6], Result).
+
+
+intersection(Set1, Set2, Result):-
+    union(Set1, Set2, Union),
+    intersection(Set1, Set2, Union, [], Result), !.
+intersection(_, _, [], Result, Result).
+intersection(Set1, Set2, [Head|Tail], SubResult, Result):-
+    (contains(Set1, Head), contains(Set2, Head), intersection(Set1, Set2, Tail, [Head|SubResult], Result));
+    intersection(Set1, Set2, Tail, SubResult, Result).
+?- intersection([1, 2, 3], [4, 5, 6], Result).
+
+
+difference(Set1, Set2, Result):-
+    intersection(Set1, Set2, Intersection),
+    difference(Set1, Intersection, [], Result), !.
+difference([], _, Result, Result).
+difference([Head|Tail], Intersection, SubResult, Result):-
+    (contains(Intersection, Head), difference(Tail, Intersection, SubResult, Result));
+    difference(Tail, Intersection, [Head|SubResult], Result).
+?- difference([1, 2, 3], [4, 5, 6], Result).
+
+

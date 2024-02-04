@@ -1,0 +1,57 @@
+;; Визначення структури вузла дерева
+(defstruct node
+  value          
+  count           
+  left          
+  right)          
+
+
+(defun insert-recursive (tree value)
+  (if (null tree)
+      (make-node :value value :count 1)
+      (let ((current-value (node-value tree)))
+        (cond
+          ((= value current-value)
+           (incf (node-count tree))
+           tree)
+          ((< value current-value)
+           (setf (node-left tree) (insert-recursive (node-left tree) value))
+           tree)
+          (t
+           (setf (node-right tree) (insert-recursive (node-right tree) value))
+           tree)))))
+
+
+(defun create-binary-search-tree (numbers)
+  (reduce #'insert-recursive numbers :initial-value nil))
+
+
+(defun most-frequent-value-recursive (tree)
+  (if (null tree)
+      nil
+      (let* ((left-max (most-frequent-value-recursive (node-left tree)))
+             (right-max (most-frequent-value-recursive (node-right tree)))
+             (current-count (node-count tree))
+             (left-count (if left-max (node-count left-max) 0))
+             (right-count (if right-max (node-count right-max) 0)))
+        (if (>= current-count (max left-count right-count))
+            tree
+            (if (= current-count left-count)
+                left-max
+                right-max)))))
+
+
+(defun find-most-frequent-value (tree)
+  (let ((most-frequent-node (most-frequent-value-recursive tree)))
+    (if most-frequent-node
+        (list (node-value most-frequent-node) (node-count most-frequent-node))
+        nil)))
+
+
+(let ((numbers '(5 2 8 2 8 1 5 5 9 5)))
+  (setq bst (create-binary-search-tree numbers))
+  (format t "Дерево пошуку: ~a~%" bst)
+  (setq most-frequent (find-most-frequent-value bst))
+  (if most-frequent
+      (format t "~%Найчастіше зустрічається значення: ~a (зустрічається ~a разів)~%" (first most-frequent) (second most-frequent))
+      (format t "Дерево порожнє~%")))

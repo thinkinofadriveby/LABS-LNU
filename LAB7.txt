@@ -1,0 +1,171 @@
+;; Завдання 1: Визначити функції MINV, MAXV, INCR, DECR для списків
+(defun minv (lst)
+  (reduce #'min lst))
+
+   
+(defun maxv (lst)
+  (reduce #'max lst))
+
+
+(defun find-minimum (lst)
+  (if (null lst)
+      nil
+      (find-min-helper (cdr lst) (car lst))))
+
+(defun find-maximum (lst)
+  (if (null lst)
+      nil
+      (find-max-helper (cdr lst) (car lst))))
+
+(defun find-min-helper (lst current-min)
+  (if (null lst)
+      current-min
+      (if (< (car lst) current-min)
+          (find-min-helper (cdr lst) (car lst))
+          (find-min-helper (cdr lst) current-min))))
+
+(defun find-max-helper (lst current-max)
+  (if (null lst)
+      current-max
+      (if (> (car lst) current-max)
+          (find-max-helper (cdr lst) (car lst))
+          (find-max-helper (cdr lst) current-max))))
+
+;; Функція INCR повертає істину, якщо значення аргументів знаходяться в строго зростаючому порядку.
+(defun incr (lst)
+  (or (null lst)
+      (null (rest lst))
+      (and (< (first lst) (second lst)) (incr (rest lst)))))
+
+;; Функція DECR повертає істину, якщо значення аргументів знаходяться в строго спадному порядку.
+(defun decr (lst)
+  (or (null lst)
+      (null (rest lst))
+      (and (> (first lst) (second lst)) (decr (rest lst)))))
+
+
+(format t "------- TASK1 -------~%")
+
+(format t "MINV: ~d~%" (minv '(1 2 3))) 
+(format t "MAXV: ~d~%" (maxv '(1 2 3))) 
+(format t "INCR: ~a~%" (incr '(1 2 3))) 
+(format t "DECR: ~a~%" (decr '(3 2 1))) 
+
+(format t "~%------- TASK2 -------~%")
+;; Завдання 2: Функції для списку з підсписками
+
+;; a) Сума елементів
+(defun sum-elements (lst)
+  (cond ((null lst) 0)
+        ((atom (first lst)) (+ (first lst) (sum-elements (rest lst))))
+        (t (+ (sum-elements (first lst)) (sum-elements (rest lst))))))
+
+;; б) Кількість елементів
+(defun count-elements (lst)
+  (cond ((null lst) 0)
+        ((atom (first lst)) (+ 1 (count-elements (rest lst))))
+        (t (+ (count-elements (first lst)) (count-elements (rest lst))))))
+
+;; в) Кількість підсписків
+(defun count-sublists (lst)
+  (cond ((null lst) 0)
+        ((atom (first lst)) (count-sublists (rest lst)))
+        (t (+ 1 (count-sublists (first lst)) (count-sublists (rest lst))))))
+
+;; г) Лінеризація списку
+(defun flatten-list (lst)
+  (cond ((null lst) nil)
+        ((atom (first lst)) (cons (first lst) (flatten-list (rest lst))))
+        (t (append (flatten-list (first lst)) (flatten-list (rest lst))))))
+
+(let ((lst '((1 2) 3 ((4 5) 6))))
+  (format t "Сума елементів: ~d~%"   (sum-elements   lst))
+  (format t "Кількість елементів: ~d~%"   (count-elements   lst))
+  (format t "Кількість підсписків: ~d~%"   (count-sublists   lst))
+  (format t "Лінеризований список: ~a~%"   (flatten-list   lst)))
+
+;; Завдання 6: Обчислити суму для кожної групи з m елементів, що знаходяться поруч
+(format t "~%------- TASK6 -------~%")
+(defun sliding-window-sum (lst m)
+  (let* ((sum (apply #'+ (subseq lst 0 m)))
+         (result (list sum)))
+    (dotimes (i (- (length lst) m))
+      (setq sum (- sum (nth i lst) (- (nth (+ i m) lst))))
+      (push sum result))
+    (reverse result)))
+
+(let ((lst '(7 1 4 2 3)) (m 2))
+  (format t "Список сум: ~a~%"   (sliding-window-sum   lst m)))
+
+
+
+;; Завдання 7: Надрукувати квадрати всіх натуральних чисел від 0 до n
+;; РЕКУРСИВНА
+(format t "~%------- TASK7 -------~%")
+(defun print-squares (n &optional (i 0) (sum 0) (odd 1))
+  (if (< i n)
+      (progn
+        (format t "~d^2 = ~d~%" i sum)
+        (print-squares n (+ i 1) (+ sum odd) (+ odd 2)))))
+
+(print-squares 10)
+
+;; ІТЕРАТИВНА
+(format t "~%------- TASK7 -------~%")
+(defun print-squares-iterative (n)
+  (loop for i from 0 to n do
+    (format t "~d^2 = ~d~%" i (* i i))))
+
+(print-squares-iterative 10)
+
+
+
+;; Завдання 8: Функції для роботи з "матрицями" - списками списків
+(format t "~%------- TASK8 -------~%")
+;; а) (MATR_GET m i j) – повернути значення m[i][j]
+(defun matr_get (m i j)
+  (nth j (nth i m)))
+
+;; б) (MATR_CHANGE m i j value) – повернути матрицю, у якій m[i][j]=value
+(defun matr_change (m i j value)
+  (let ((new-row (copy-list (nth i m))))
+    (setf (nth j new-row) value)
+    (setf (nth i m) new-row)
+    m))
+
+;; в) (GENMATR0 i j) – згенерувати нульову матрицю i * j
+(defun genmatr0 (i j)
+  (make-list i :initial-element (make-list j :initial-element 0)))
+
+;; г) (PMATR m i j) – надрукувати матрицю m як таблицю i * j
+(defun pmatr (m i j)
+  (dotimes (x i)
+    (dotimes (y j)
+      (format t "~d " (matr_get m x y)))
+    (format t "~%")))
+
+(let ((m '((1 2 3) (4 5 6) (7 8 9))))
+  (format t "Значення m[1][1]: ~d~%"   (matr_get   m 1 1))
+  (format t "Змінена матриця: ~a~%"   (matr_change   m 1 1 10))
+  (format t "Нульова матриця: ~a~%"   (genmatr0   3 3))
+  (format t "Вивід матриці:~%")
+  (pmatr   m 3 3))
+
+(setq my-list '(3 1 4 1 5 9 2 6 5 3 5))
+
+(let ((min-value (find-minimum my-list))
+      (max-value (find-maximum my-list)))
+  (format t "~%MIN / MAX~%")
+  (format t "Мінімальне значення: ~a~%" min-value)
+  (format t "Максимальне значення: ~a~%" max-value))
+
+
+
+
+
+
+
+
+
+
+

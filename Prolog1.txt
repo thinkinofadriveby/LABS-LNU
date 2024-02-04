@@ -1,0 +1,130 @@
+Код генеалогічного дерева:
+
+/* Facts*/
+/* Generation 1 */
+male(john).
+female(jane).
+
+/* Generation 2 */
+male(bob).
+female(susan).
+
+/* Generation 3 */
+male(jack).
+female(emily).
+female(lisa).
+male(david).
+
+/* Generation 4 */
+female(olivia).
+male(alex).
+female(sophia).
+male(michael).
+male(ethan).
+female(ava).
+female(ella).
+male(matthew).
+
+/* Parent-child relationship */
+child(bob, john).
+child(susan, john).
+child(jack, bob).
+child(emily, bob).
+child(lisa, bob).
+child(david, susan).
+child(olivia, jack).
+child(alex, jack).
+child(sophia, emily).
+child(michael, emily).
+child(ethan, lisa).
+child(ava, lisa).
+child(ella, david).
+child(matthew, david).
+
+/* Rules */
+
+% Правило: father(Father, Child)
+% Визначає, чи є `Father` батьком `Child`, якщо `Father` чоловік.
+father(Father, Child):- child(Child, Father), male(Father).
+
+% Правило: mother(Mother, Child)
+% Визначає, чи є `Mother` матір'ю `Child`, якщо `Mother` жінка.
+mother(Mother, Child):- child(Child, Mother), female(Mother).
+
+% Правило: grandparent(Grandparent, Grandchild)
+% Визначає, чи є `Grandparent` бабусею чи дідусем `Grandchild`.
+grandparent(Grandparent, Grandchild):- child(Grandchild, Parent), child(Parent, Grandparent).
+
+% Правило: grandmother(Grandmother, Grandchild)
+% Визначає, чи є `Grandmother` бабусею `Grandchild`.
+grandmother(Grandmother, Grandchild):- grandparent(Grandmother, Grandchild), female(Grandmother).
+
+% Правило: grandfather(Grandfather, Grandchild)
+% Визначає, чи є `Grandfather` дідусем `Grandchild`.
+grandfather(Grandfather, Grandchild):- grandparent(Grandfather, Grandchild), male(Grandfather).
+
+% Правило: sibling(Sibling1, Sibling2)
+% Визначає, чи є `Sibling1` і `Sibling2` братами або сестрами.
+% Вони повинні мати спільних батьків і різні імена.
+sibling(Sibling1, Sibling2):- 
+    mother(Mother, Sibling1),
+    father(Father, Sibling1), 
+    mother(Mother, Sibling2),
+    father(Father, Sibling2), 
+    Sibling1 \= Sibling2.
+
+% Правило: sister(Sister, Sibling)
+% Визначає, чи є `Sister` сестрою `Sibling`.
+% Використовує правило `sibling`.
+sister(Sister, Sibling):- sibling(Sister, Sibling), female(Sister).
+
+% Правило: brother(Brother, Sibling)
+% Визначає, чи є `Brother` братом `Sibling`.
+% Використовує правило `sibling`.
+brother(Brother, Sibling):- sibling(Brother, Sibling).
+
+% Правило: uncle(Uncle, Nephew)
+% Визначає, чи є `Uncle` дядьком `Nephew`.
+% Використовує правило `brother`.
+uncle(Uncle, Nephew):- child(Nephew, Sibling), brother(Uncle, Sibling).
+
+% Правило: aunt(Aunt, Nephew)
+% Визначає, чи є `Aunt` тіткою `Nephew`.
+% Використовує правило `sister`.
+aunt(Aunt, Nephew):- child(Nephew, Sibling), sister(Aunt, Sibling).
+
+% Правило: cousin(Cousin1, Cousin2)
+% Визначає, чи є `Cousin1` і `Cousin2` двоюрідними братами або сестрами.
+% Вони повинні мати спільного дядька чи тітку.
+cousin(Cousin1, Cousin2):- 
+    child(Cousin2, UncleOrAunt),
+    (uncle(UncleOrAunt, Cousin1); aunt(UncleOrAunt, Cousin1)).
+
+% Правило: ancestor(Ancestor, Successor)
+% Визначає, чи є `Ancestor` предком `Successor`.
+% Використовує рекурсивне правило для визначення всіх предків.
+ancestor(Ancestor, Successor):-
+    child(Successor, Ancestor).
+
+% Рекурсивне правило: ancestor(AncestorOfAncestor, Successor)
+% Визначає предків предків для `Successor`.
+ancestor(AncestorOfAncestor, Successor):-
+    ancestor(AncestorOfAncestor, Ancestor),
+    child(Successor, Ancestor).
+
+% Правило: relative(Relative1, Relative2)
+% Визначає, чи є `Relative1` спорідненим з `Relative2` (батько, мати, брат, сестра).
+% Використовує правила `mother`, `father`, `sister`, `brother`.
+relative(Relative1, Relative2):-
+    mother(Relative1, Relative2);
+    father(Relative1, Relative2);
+    mother(Relative2, Relative1);
+    father(Relative2, Relative1). 
+
+% Правило: relative(Relative1, Relative3)
+% Визначає, чи є `Relative1` спорідненим з `Relative3` через спорідненість з `Relative2`.
+
+
+У ньому визначено 4 покоління та 20 відношень "батьки-діти". Подання у вигляді дерева прикріплю окремим файлом.
+У коді я використовував різні бінарні відношення по типу mother, parent, child і т.д.
+Визначив прості правила "uncle", "aunt", "cousin", "brother" та "sister" та рекурсивні "ancestor" та "successor"

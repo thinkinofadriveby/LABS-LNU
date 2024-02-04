@@ -1,0 +1,187 @@
+% Книги
+book('Choke', 'Chuck Palahnik', 2001, [genre('Novel'), genre('Satire')], 'Anchor Books').
+book('Survivor', 'Chuck Palahnik', 1999, [genre('Novel'), genre('Satire')], 'W. W. Norton & Company').
+book('Fight Club', 'Chuck Palahnik', 1996, [genre('Novel'), genre('Satire')], 'W. W. Norton & Company').
+book('Invisible Monsters', 'Chuck Palahnik', 1999, [genre('Novel'), genre('Transgressive Fiction')], 'W. W. Norton & Company').
+book('1984', 'George Orwell', 1949, [genre('Dystopian'), genre('Political Fiction')], 'Penguin Books').
+book('To Kill a Mockingbird', 'Harper Lee', 1960, [genre('Novel'), genre('Southern Gothic')], 'HarperCollins').
+book('Pride and Prejudice', 'Jane Austen', 1813, [genre('Romance'), genre('Classic')], 'Vintage Classics').
+book('The Great Gatsby', 'F. Scott Fitzgerald', 1925, [genre('Fiction'), genre('Classic')], 'Scribner').
+book('Brave New World', 'Aldous Huxley', 1932, [genre('Science Fiction'), genre('Dystopian')], 'Vintage').
+book('Aaaaa aaaaaa', 'Elvia Ardalani', 1945, [genre('Dystopian'), genre('Political Fiction')], 'Penguin Books').
+book('Lord of the Flies', 'William Golding', 1954, [genre('Dystopian'), genre('Coming-of-Age')], 'Faber and Faber').
+book('The Catcher in the Rye', 'J. D. Salinger', 1951, [genre('Coming-of-Age'), genre('Literary Fiction')], 'Little, Brown and Company').
+book('One Hundred Years of Solitude', 'Gabriel García Márquez', 1967, [genre('Magical Realism'), genre('Family Saga')], 'Harper & Row').
+book('Beloved', 'Toni Morrison', 1987, [genre('Magical Realism'), genre('Historical Fiction')], 'Alfred A. Knopf').
+book('The Handmaids Tale', 'Margaret Atwood', 1985, [genre('Dystopian'), genre('Science Fiction')], 'McClelland and Stewart').
+book('The Color Purple', 'Alice Walker', 1982, [genre('Coming-of-Age'), genre('Historical Fiction')], 'Harcourt Brace Jovanovich').
+book('The Curious Incident of the Dog in the Night-Time', 'Mark Haddon', 2003, [genre('Mystery'), genre('Coming-of-Age')], 'Doubleday').
+book('The God of Small Things', 'Arundhati Roy', 1997, [genre('Magical Realism'), genre('Family Saga')], 'Random House India').
+book('The Book Thief', 'Markus Zusak', 2005, [genre('Historical Fiction'), genre('Young Adult Fiction')], 'Random House Childrens Books').
+book('The Hunger Games', 'Suzanne Collins', 2008, [genre('Science Fiction'), genre('Young Adult Fiction')], 'Scholastic Press').
+book('The Fault in Our Stars', 'John Green', 2012, [genre('Young Adult Fiction'), genre('Romance')], 'Dutton Books for Young Readers').
+book('All the Bright Places', 'Jennifer Niven', 2015, [genre('Young Adult Fiction'), genre('Romance')], 'Knopf Books for Young Readers').
+
+% Автори
+author('George Orwell', 'Eric Arthur Blair', '25 June 1903', '21 January 1950').
+author('Harper Lee', 'Nelle Harper Lee', '28 April 1926', '19 February 2016').
+author('Jane Austen', 'Jane Austen', '16 December 1775', '18 July 1817').
+author('F. Scott Fitzgerald', 'Francis Scott Fitzgerald', '24 September 1896', '21 December 1940').
+author('Aldous Huxley', 'Aldous Leonard Huxley', '26 July 1894', '22 November 1963').
+author('William Golding', 'William Gerald Golding', '19 September 1911', '19 June 1993').
+author('J. D. Salinger', 'Jerome David Salinger', 'January 1, 1919', 'January 27, 2010').
+author('Gabriel Garcia Marquez', 'Gabriel Jose Garcia Marquez', 'March 6, 1927', 'April 17, 2014').
+author('Toni Morrison', 'Chloe Anthony Wofford', 'February 18, 1931', 'August 5, 2019').
+author('Margaret Atwood', 'Margaret Eleanor Atwood', 'November 18, 1939', '-').
+author('Alice Walker', 'Alice Malsenior Walker', 'February 9, 1944', '-').
+author('Mark Haddon', 'Mark Stephen Haddon', 'October 3, 1962', '-').
+author('Arundhati Roy', 'Suzanna Arundhati Roy', 'November 24, 1961', '-').
+author('Khaled Hosseini', 'Khaled Hosseini', 'March 4, 1965', '-').
+author('Markus Zusak', 'Markus Frank Zusak', 'June 23, 1975', '-').
+author('Suzanne Collins', 'Suzanne Marie Collins', 'August 10, 1962', '-').
+author('John Green', 'John Michael Green', 'August 18, 1977', '-').
+author('Jennifer Niven', 'Jennifer Lynn Niven', 'February 10, 1968', '-').
+
+% Видавництва
+publisher('Penguin Books', 'United Kingdom', 1935).
+publisher('HarperCollins', 'United States', 1989).
+publisher('Vintage Classics', 'United Kingdom', 1955).
+publisher('Scribner', 'United States', 1846).
+publisher('Vintage', 'United Kingdom', 1925).
+publisher('Random House', 'United States', 1925).
+publisher('Penguin Random House', 'United States', 2013).
+publisher('Simon & Schuster', 'United States', 1924).
+publisher('Macmillan Publishers', 'United Kingdom', 1843).
+publisher('Hachette Livre', 'France', 1826).
+publisher('HarperCollins Publishers', 'United Kingdom', 1817).
+publisher('Pan Macmillan', 'United Kingdom', 1944).
+publisher('Scholastic Corporation', 'United States', 1920).
+publisher('HarperCollins Childrens Books', 'United States', 1989).
+publisher('Random House Childrens Books', 'United States', 1925).
+publisher('Dutton Childrens Books', 'United States', 1859).
+publisher('Knopf Books for Young Readers', 'United States', 1915).
+publisher('Balzer Bray', 'United States', 2004).
+publisher('Little, Brown Books for Young Readers', 'United States', 1926).
+
+% Читачі
+reader('Alice', 'alice@email.com').
+reader('Bob', 'bob@email.com').
+reader('Charlie', 'charlie@email.com').
+reader('David', 'david@email.com').
+reader('Eva', 'eva@email.com').
+reader('Frank', 'frank@email.com').
+reader('George', 'george@email.com').
+reader('John', 'john@email.com').
+reader('Mary', 'mary@email.com').
+reader('Peter', 'peter@email.com').
+reader('Susan', 'susan@email.com').
+reader('Tom', 'tom@email.com').
+reader('William', 'william@email.com').
+reader('Jane', 'jane@email.com').
+reader('Michael', 'michael@email.com').
+reader('Sarah', 'sarah@email.com').
+reader('Jessica', 'jessica@email.com').
+reader('Daniel', 'daniel@email.com').
+reader('Emily', 'emily@email.com').
+reader('Matthew', 'matthew@email.com').
+reader('Olivia', 'olivia@email.com').
+
+% Селектори
+get_title(Book, Title) :- book(Title, _, _, _, _).
+get_author(Book, Author) :- book(_, Author, _, _, _).
+get_genres(Book, Genres) :- book(_, _, _, Genres, _).
+get_publisher(Book, Publisher) :- book(_, _, _, _, Publisher).
+get_full_name(Author, FullName) :- author(Author, FullName, _, _).
+get_birth_date(Author, BirthDate) :- author(Author, _, BirthDate, _).
+get_readers_of_genre(Genre, Readers) :-
+    findall(Reader, (reader(Reader, _), read_book(Reader, Book), book_has_genre(Book, Genre)), Readers).
+
+% Запити
+% Знайти всі книги автора з вказаним іменем.
+find_books_by_author(AuthorName, Books) :-
+    findall(Title, (book(Title, AuthorName, _, _, _)), Books).
+
+% Знайти всі книги вказаного жанру.
+find_books_by_genre(Genre, Books) :-
+    findall(Title, (book(Title, _, _, Genres, _), member(genre(Genre), Genres)), Books).
+
+% Знайти всі книги, видані після певного року.
+find_books_published_after(Year, Books) :-
+    findall(Title, (book(Title, _, PublishedYear, _, _), PublishedYear > Year), Books).
+
+read_book('Alice', '1984').
+read_book('Alice', 'Pride and Prejudice').
+read_book('Bob', 'Pride and Prejudice').
+read_book('Charlie', 'The Great Gatsby').
+read_book('David', 'To Kill a Mockingbird').
+read_book('David', 'Pride and Prejudice').
+read_book('Eva', 'Brave New World').
+read_book('Frank', 'Pride and Prejudice').
+read_book('George', '1984').
+read_book('John', 'To Kill a Mockingbird').
+read_book('John', 'Pride and Prejudice').
+read_book('Mary', 'Brave New World').
+read_book('Peter', '1984').
+read_book('Susan', 'The Great Gatsby').
+read_book('Tom', 'Pride and Prejudice').
+read_book('William', 'Pride and Prejudice').
+read_book('William', 'The Great Gatsby').
+read_book('Jane', '1984').
+read_book('Michael', 'To Kill a Mockingbird').
+read_book('Sarah', 'Pride and Prejudice').
+read_book('Jessica', 'Brave New World').
+read_book('Daniel', 'Pride and Prejudice').
+read_book('Daniel', 'The Great Gatsby').
+read_book('Emily', '1984').
+read_book('Matthew', 'To Kill a Mockingbird').
+read_book('Olivia', 'Pride and Prejudice').
+
+
+% Знайти всі книги, які прочитав певний читач.
+find_books_read_by(ReaderName, Books) :-
+    findall(Title, (read_book(ReaderName, Title)), Books).
+
+% автор з найбільшою кількістю книжок
+find_author_with_most_books(Author, BookCount) :-
+    findall(Author, book(_, Author, _, _, _), Authors),
+    member(Author, Authors),
+    book_count_by_author(Author, BookCount).
+
+book_count_by_author(Author, BookCount) :-
+    findall(Book, book(Book, Author, _, _, _), Books),
+    length(Books, BookCount).
+
+% Рекурсивний запит для знаходження всіх книг певного автора
+find_all_books_by_author_recursive(Author, Books) :-
+    find_all_books_by_author_recursive_helper(Author, [], BooksReversed),
+    reverse(BooksReversed, Books).
+
+find_all_books_by_author_recursive_helper(_, Accumulator, Accumulator).
+find_all_books_by_author_recursive_helper(Author, TempAccumulator, Books) :-
+    book(Title, Author, _, _, _),
+    find_all_books_by_author_recursive_helper(Author, [Title | TempAccumulator], Books).
+
+print_book_info(Title) :-
+    book(Title, Author, Year, Genres, Publisher),
+    write('Title: '), write(Title), nl,
+    write('Author: '), write(Author), nl,
+    write('Year: '), write(Year), nl,
+    write('Genres: '), write(Genres), nl,
+    write('Publisher: '), write(Publisher), nl.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
